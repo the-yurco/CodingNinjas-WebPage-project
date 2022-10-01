@@ -1,0 +1,239 @@
+@import '../abstracts/mixins';
+
+.introduction__wrapper{
+    @include introduction_set;
+
+    .left__container{
+        @include left__container_set;
+
+        .header__lists{
+            @include h3_lists;
+        }
+
+        .container__lists{
+            @include container__lists__set;
+
+            .first__list {
+                    @include first__list;
+            
+                    .item {
+                        @include list_set;
+                    }
+            }
+            .second__list {
+                @include second__list;
+
+                .item {
+                    @include list_set;
+                }
+            }
+        }
+    }
+    .right__container{
+        @include right__container_set;
+            
+                .youtube__link{
+
+                    @include ytb_set;
+
+                    svg{
+                        z-index: 1000;
+                        background-size: 100% 100%;
+                        float: right;
+                        position: relative;
+                        top: 1rem;
+                        left: 2rem;
+                        margin-right: 1rem;
+                    }
+
+                    #man {
+                            animation: man 0.5s ease;
+                            transform-origin: right;
+                            transform-box: fill-box;
+                        }
+                    
+                        #main__table {
+                            animation: main__table 1s ease;
+                            transform-origin: right;
+                            transform-box: fill-box;
+                        }
+                    
+                        #first__content {
+                            animation: first_content 1.5s ease;
+                            transform-origin: right;
+                            transform-box: fill-box;
+                        }
+                    
+                        #second__content {
+                            animation: second_content 2s ease;
+                            transform-origin: right;
+                            transform-box: fill-box;
+                        }
+                }
+    }
+}
+
+@keyframes man {
+    0% {
+        transform: translateY(1000%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes main__table {
+    0% {
+        transform: translateY(1000%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes first_content {
+    0% {
+        transform: translateY(1000%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes second_content {
+    0% {
+        transform: translateY(1000%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .introduction__wrapper {
+        margin: 50px 0 0 0;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        
+
+        .left__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            min-width: 100%;
+            height: 320px;
+            grid-column-start: 2;
+            grid-column-end: 20;
+            padding: 20px 0 0 0;
+            background-color: $primary-color;
+
+            .container__lists{
+                display: grid;
+                grid-gap: 50px;
+                grid-template-areas:
+                        'first__list second__list';
+                margin: 0 0 40px 0;
+                height: 100%;
+                resize: both;
+
+                .first__list{
+                    height: 100%;
+                        resize: both;
+                }
+            }
+        }
+
+        .right__container{
+            text-align: center;
+            border: 1px solid black;
+            grid-column-start: 2;
+            grid-column-end: 20;
+            box-shadow: 5px 4px $button-color;
+            display: grid;
+                place-items: center;
+
+            .youtube__link{
+                width: 100%;
+                height: 100%;
+                resize: both;
+                
+
+                svg{
+                width: 100%;
+                height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .introduction__wrapper {
+        margin: 50px 0 0 0;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+
+
+        .left__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            min-width: 100%;
+            height: 320px;
+            grid-column-start: 2;
+            grid-column-end: 20;
+            padding: 20px 0 0 0;
+            background-color: $primary-color;
+
+            .container__lists {
+                display: grid;
+                grid-gap: 20px;
+                grid-template-areas:
+                    'first__list '
+                    'second__list';
+                height: 100%;
+                resize: both;
+                padding: 0 0 30px 0;
+
+                .first__list {
+                    height: 100%;
+                    resize: both;
+                }
+                .second__list {
+                    height: 100%;
+                    resize: both;
+                }
+            }
+        }
+
+        .right__container {
+            text-align: center;
+            border: 1px solid black;
+            grid-column-start: 2;
+            grid-column-end: 20;
+            box-shadow: 5px 4px $button-color;
+            display: grid;
+            place-items: center;
+
+            .youtube__link {
+                width: 100%;
+                height: 100%;
+                resize: both;
+
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

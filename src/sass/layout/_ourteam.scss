@@ -1,0 +1,450 @@
+.our__team__wrapper{
+    @include our__team_set;
+
+    .h2__container{
+        @include h2__container_set;
+
+        .h2__header{
+            @include h2__txt_set;
+        }
+    }
+
+    .cards__container{
+        @include cards__container_set;
+
+        .card{
+            @include card;
+
+
+            .card__name{
+
+                h3{
+                    @include h3__set;
+
+                }
+            }
+
+            .logo__avatar{
+
+                img{
+                    @include images__avatar_set;
+
+                }
+            }
+
+            .social__links{
+                @include social__links_set;
+
+                .links__list{
+                    @include link__lists_set;
+
+                    li{
+                        @include link_set;
+                        a{
+                            i{
+                                @include icon_set;
+
+                                
+                            }
+                        }
+                    }
+                }
+            }
+
+            .description__container{
+                @include description__container_set;
+
+                p{
+                    @include description_set;
+                }
+            }
+
+            &:hover {
+                box-shadow: 5px 4px $text-color;
+                transform: translateY(-5px);
+            }
+        }
+    &:last-child {
+        margin: 50px 0;
+    }
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .our__team__wrapper{
+        background-color: $primary-color;
+        margin: 50px 0 0 0;
+        padding: 10px 0;
+
+        .cards__container{
+            display: grid;
+            grid-template-columns: repeat(2, 0.5fr);
+            justify-content: center;
+            gap: 40px 0px;
+
+            .card{
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(3,0.5fr);
+                gap: 0px;
+                margin: 0 auto 0 auto;
+                height: 250px;
+                width: 400px;
+                background-color: $button-color;
+                box-shadow: 5px 4px $text-color;
+                transition: 0.5s ease;
+                cursor: pointer;
+                border: 1px solid black;
+
+                .card__name {
+                    grid-column-start: 1;
+                    grid-column-end: 5;
+                    grid-row: auto;
+                    margin: -50px 0 0 0;
+                    text-align: center;
+
+                    h3 {
+                        @include h3__set;
+                    }
+                }
+
+                .social__links {
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                    grid-row: 2;
+
+                    .links__list {
+                        position: absolute;
+                        top: 70px;
+                        left: 180px;
+                        width: 200px;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        flex-direction: row;
+                        float: right;
+                    }
+                }
+
+                .logo__avatar {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row: 2;
+                    img {
+                        position: absolute;
+                        top: 65px;
+                        left: 40px;
+                        height: 100px;
+                        width: 110px;
+                        border-radius: 100%;
+                    }
+                }
+
+                .description__container {
+                    position: absolute;
+                    top: 165px;
+                    grid-column-start: 1;
+                    grid-column-end: 5;
+                    grid-row: auto;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .our__team__wrapper {
+        background-color: $primary-color;
+        margin: 50px 0 0 0;
+        padding: 10px 0;
+
+        .cards__container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: center;
+            gap: 40px 0px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 350px;
+                width: 400px;
+                background-color: $button-color;
+                box-shadow: 5px 4px $text-color;
+                transition: 0.5s ease;
+                cursor: pointer;
+                border: 1px solid black;
+
+                .social__links{
+
+                    .links__list{
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 884px) {
+    .our__team__wrapper {
+        background-color: $primary-color;
+        margin: 50px 0 0 0;
+        padding: 10px 0;
+
+        .cards__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3,1fr);
+            justify-content: center;
+    
+
+            .card {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 0px;
+                margin: 0 auto 0 auto;
+                height: 250px;
+                width: 200px;
+                background-color: $button-color;
+                box-shadow: 5px 4px $text-color;
+                transition: 0.5s ease;
+                cursor: pointer;
+                border: 1px solid black;
+                
+                .card__name {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    margin: -50px 0 0 0;
+                    text-align: center;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+
+                .social__links {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    align-items: center;
+                    justify-content: center;
+
+                    .links__list {
+                        float: left;
+                        top: 150px;
+                        left: 40px;
+                        height: 100px;
+                        width: 110px;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+
+                .logo__avatar {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+
+                    img {
+                        position: absolute;
+                        top: 65px;
+                        left: 40px;
+                        height: 100px;
+                        width: 110px;
+                        border-radius: 100%;
+                    }
+                }
+
+                .description__container {
+                    display: none;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .our__team__wrapper {
+        background-color: $primary-color;
+        margin: 50px 0 0 0;
+        padding: 10px 0;
+
+        .cards__container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            justify-content: center;
+
+
+            .card {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 0px;
+                margin: 0 auto 0 auto;
+                height: 250px;
+                width: 350px;
+                background-color: $button-color;
+                box-shadow: 5px 4px $text-color;
+                transition: 0.5s ease;
+                cursor: pointer;
+                border: 1px solid black;
+
+                .card__name {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    margin: -50px 0 0 0;
+                    text-align: center;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+
+                .social__links {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    align-items: center;
+                    justify-content: center;
+
+                    .links__list {
+                        float: left;
+                        top: 150px;
+                        left: 110px;
+                        height: 100px;
+                        width: 110px;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+
+                .logo__avatar {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+
+                    img {
+                        position: absolute;
+                        top: 65px;
+                        left: 110px;
+                        height: 100px;
+                        width: 110px;
+                        border-radius: 100%;
+                    }
+                }
+
+                .description__container {
+                    display: none;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .our__team__wrapper {
+        background-color: $primary-color;
+        margin: 50px 0 0 0;
+        padding: 10px 0;
+
+        .cards__container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            justify-content: center;
+
+
+            .card {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 0px;
+                margin: 0 auto 0 auto;
+                height: 250px;
+                width: 250px;
+                background-color: $button-color;
+                box-shadow: 5px 4px $text-color;
+                transition: 0.5s ease;
+                cursor: pointer;
+                border: 1px solid black;
+
+                .card__name {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    margin: -50px 0 0 0;
+                    text-align: center;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+
+                .social__links {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    align-items: center;
+                    justify-content: center;
+
+                    .links__list {
+                        float: left;
+                        top: 150px;
+                        left: 70px;
+                        height: 100px;
+                        width: 110px;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+
+                .logo__avatar {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+
+                    img {
+                        position: absolute;
+                        top: 65px;
+                        left: 70px;
+                        height: 100px;
+                        width: 110px;
+                        border-radius: 100%;
+                    }
+                }
+
+                .description__container {
+                    display: none;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

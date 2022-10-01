@@ -1,0 +1,36 @@
+.footer{
+    @include footer_set;
+
+    .navbar{
+        @include footer__navbar_set;
+
+        ul{
+            @include navbar__lists_set;
+
+            li{
+                @include lists_set;
+                &::after{
+                    content: " | ";
+                    margin: 0 20px;
+                }
+
+                &:last-child::after{
+                    content: " ";
+                }
+
+                a{
+                    @include links;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+                
+            }
+
+        }
+    }
+    .copyright__link{
+        @include copyright;
+    }
+}

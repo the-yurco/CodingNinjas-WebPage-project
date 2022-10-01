@@ -1,0 +1,56 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.top__wrapper{
+    @include topwrapper_set;
+
+    .text__box{
+        @include txtbox_set;
+
+        .upper__text{
+            @include upperH2_set;
+        }
+        .lower__text{
+            @include lowerH3_set;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1125px) {
+    .top__wrapper{
+        display: flex;
+            align-items: center;
+            justify-content: center;
+
+        .text__box{
+            scale: 0.8;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .top__wrapper {
+            align-items: center;
+    
+            .text__box {
+                scale: 0.65;
+            }
+        }
+
+}
+
+@media screen and (max-width: 430px) {
+    .top__wrapper {
+        align-items: center;
+
+        .text__box {
+            scale: 0.65;
+            
+            .upper__text{
+                font-size: 25px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,117 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.header {
+    @include header__set;
+
+    .container__img {
+
+        .main__logo {
+
+            @include set__logo;
+        }
+    }
+
+    .container__navbar {
+
+        .navbar {
+
+            .navbar__lists {
+                @include navbar__lists;
+
+                .list {
+                    @include list;
+
+                    a {
+                        @include link;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container__btn {
+
+        .btn__login {
+            @include set__btn;
+
+            &:active{
+                box-shadow: 1px 1px $text-color;
+                transform: translateY(2px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .header{
+        justify-content: space-between;
+
+        .container__navbar {
+            margin: 0 0 0 20px;
+        }
+
+        .container__btn {
+            margin: 0 13px 0 0;
+
+            .btn__login {
+                @include set__btn;
+    
+                &:active {
+                    box-shadow: 1px 1px $text-color;
+                    transform: translateY(2px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .header {
+        justify-content: space-between;
+
+        .container__navbar {
+            margin: 0 0 0 50px;
+        }
+
+        .container__btn {
+            margin: 0 13px 0 0;
+
+            .btn__login {
+                @include set__btn;
+
+                &:active {
+                    box-shadow: 1px 1px $text-color;
+                    transform: translateY(2px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header {
+        justify-content: space-between;
+
+        .container__navbar {
+            margin: 0 0 0 20px;
+        }
+
+        .container__btn {
+            margin: 0 13px 0 0;
+
+            .btn__login {
+                @include set__btn;
+
+                &:active {
+                    box-shadow: 1px 1px $text-color;
+                    transform: translateY(2px);
+                }
+            }
+        }
+    }
+}

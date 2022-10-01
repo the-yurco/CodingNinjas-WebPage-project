@@ -1,0 +1,260 @@
+@import './variables';
+
+
+/* HEADER */
+@mixin header__set {
+    position: relative;
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-around;
+    background-color: $primary-color;
+}
+
+@mixin set__logo {
+    height: fit-content;
+    max-height: 55px;
+    float: left;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@mixin navbar__lists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $bold-width;
+    font-size: $a-size;
+    margin: 20px 0 0 -100px;
+}
+
+@mixin list {
+    margin: 0 10px;
+    list-style: none;
+}
+
+@mixin link {
+    text-decoration: none;
+    color: $text-color;
+}
+
+@mixin set__btn {
+    width: 75px;
+    height: 30px;
+    background-color: $button-color;
+    color: black;
+    box-shadow: 2px 1px $text-color;
+    font-size: $btn-size;
+    font-weight: $bold-width;
+    border: none;
+    float: right;
+    margin: 20px auto 0 0;
+    cursor: pointer;
+}
+
+/* TOP-WRAPPER */
+@mixin topwrapper_set{
+    position: relative;
+    background-color: $primary-color;
+    height: 300px;
+    display: grid;
+    transition: 0.5s ease;
+    place-items: center;
+}
+
+@mixin txtbox_set{
+    display: grid;
+    background-color: $button-color;
+    height: 200px;
+    width: 500px;
+    place-items: center;
+    padding: 10px;
+    box-shadow: 5px 4px $text-color;
+    border: 1px solid black;
+}
+
+@mixin upperH2_set{
+    font-size: $h2-size;
+}
+
+@mixin lowerH3_set {
+    font-size: $h3-size;
+}
+
+/* INTRODUCTION WRAPPER */
+@mixin introduction_set{
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+@mixin left__container_set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    min-width: 300px;
+    grid-column: 2 / 3;
+    padding: 20px 0 0 0;
+    background-color: $primary-color;
+}
+
+@mixin h3_lists{
+    margin: 40px 0 35px 0;
+    color: $text-color;
+    font-size: $h3-size;
+}
+
+@mixin container__lists__set {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-areas: 
+        'first__list'
+        'second__list';
+}
+
+@mixin first__list {
+    color: $text-color;
+    font-size: $p-size;
+    grid-area: first__list;
+}
+
+@mixin second__list{
+    color: $text-color;
+    font-size: $p-size;
+    grid-area: second__list;
+}
+
+@mixin list_set{
+
+}
+
+@mixin right__container_set{
+    text-align: center;
+    border: 1px solid black;
+    grid-column: 3 / 4;
+    padding: 20px;
+    box-shadow: 5px 4px $button-color;  
+}
+
+@mixin ytb_set{
+    max-width: 750px;
+    min-width: 200px;
+}
+
+/* OUR TEAM */
+@mixin our__team_set {
+    background-color: $primary-color;
+    margin: 50px 0 0 0;
+    padding: 10px 0;
+}
+
+@mixin h2__container_set {
+    text-align: center;
+    color: $text-color;
+    margin: 50px ;
+}
+
+@mixin h2__txt_set {
+    font-size: $h2-size;
+}
+
+@mixin cards__container_set {
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    justify-content: center;
+    gap: 40px 30px;
+}
+
+@mixin card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    height: 350px;
+    width: 300px;
+    background-color: $button-color;
+    box-shadow: 5px 4px $text-color;
+    transition: 0.5s ease;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+@mixin h3__set{
+    font-size: $h3-size;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+@mixin images__avatar_set {
+    height: 140px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+@mixin social__links_set {
+    
+}
+
+@mixin link__lists_set {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin link_set{
+    list-style: none;
+}
+
+@mixin icon_set{
+    height: 30px;
+    width: 30px;
+    margin: 10px 10px;
+    color: $text-color;
+}
+
+@mixin description__container_set{
+    margin: 20px 10px;
+}
+
+@mixin description_set{
+    width: 230px;
+    font-size: $p-size;
+}
+
+/* FOOTER */
+@mixin footer_set {
+
+}
+
+@mixin footer__navbar_set {
+
+}
+
+@mixin navbar__lists_set {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $primary-color;
+}
+
+@mixin lists_set {
+    list-style: none;
+    margin: 50px 0 25px 0;
+}
+
+@mixin links {
+    text-decoration: none;
+    color: $text-color;
+}
+
+@mixin copyright {
+    text-align: center;
+    background-color: $primary-color;
+    color: $text-color;
+    height: 75px;
+}
+
+
+

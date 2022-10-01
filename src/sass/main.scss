@@ -1,0 +1,17 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'layout/introduction';
+@import 'layout/header';
+@import 'layout/ourteam';
+@import 'layout/footer';
+
+@import 'pages/home';
+@import 'pages/aboutus';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+}
